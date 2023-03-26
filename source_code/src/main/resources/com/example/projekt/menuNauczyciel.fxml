@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1120.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.MenuNauczycielController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane fx:id="border_pane" layoutX="237.0" layoutY="137.0" prefHeight="620.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="1100.0" styleClass="goryPasekPodklad" stylesheets="@../../../css/szablon.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="260.0" layoutY="-75.0" prefHeight="40.0" prefWidth="874.0" styleClass="goryPasek" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="14.0" layoutY="40.0" size="2.5em" wrappingWidth="44.928571701049805" />
+                              <Label layoutX="86.0" layoutY="13.0" text="Dziennik Szkolny">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="zamknij" layoutX="1028.0" layoutY="7.0" mnemonicParsing="false" onAction="#zamknij" styleClass="zamknij" stylesheets="@../../../css/szablon.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" textAlignment="CENTER" wrappingWidth="50.678571701049805" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="zminimalizuj" layoutX="956.0" layoutY="2.0" mnemonicParsing="false" onAction="#zminimalizuj" styleClass="zminimalizuj" stylesheets="@../../../css/szablon.css" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" textAlignment="CENTER" wrappingWidth="50.678571701049805" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="740.0" prefWidth="224.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="170.0" prefHeight="740.0" prefWidth="224.0" styleClass="lewyPasek" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="59.0" layoutY="136.0" size="8em" textAlignment="CENTER" wrappingWidth="104.28571319580078" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="154.0" text="Witaj!" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.5" layoutX="113.0" layoutY="208.0" startX="-101.5" stroke="WHITE" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" />
+                              <Button fx:id="menu" layoutX="26.0" layoutY="245.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="170.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Menu">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="lista_nauczycieli" layoutX="26.0" layoutY="291.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="46.0" prefWidth="170.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Lista nauczycieli">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="wyloguj" layoutX="31.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleBottomClick" prefHeight="46.0" prefWidth="159.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Wyloguj się">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cofnij" layoutX="31.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleBottomClick" prefHeight="46.0" prefWidth="159.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Cofnij">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="menu_glowne" layoutX="241.0" layoutY="198.0" prefHeight="740.0" prefWidth="874.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="15.0" layoutY="16.0" prefHeight="720.0" prefWidth="880.0" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                                 <styleClass>
+                                    <String fx:value="tlo" />
+                                    <String fx:value="cien" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="344.0" layoutY="406.0" prefHeight="276.0" prefWidth="461.0" styleClass="panel" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="344.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="380.0">
+                                       <children>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="FEMALE" layoutX="37.0" layoutY="173.0" size="7em" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="44.0" AnchorPane.topAnchor="83.0" />
+                                          <Label alignment="CENTER" layoutX="149.0" layoutY="221.0" prefHeight="20.0" prefWidth="164.0" text="Liczba kobiet" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="205.0">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="liczba_kobiet" alignment="CENTER" layoutX="210.0" layoutY="83.0" prefHeight="20.0" prefWidth="58.0" text="0" textFill="WHITE">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="358.0" prefHeight="320.0" prefWidth="482.0" styleClass="panel" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="358.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="40.0">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="MALE" layoutX="44.0" layoutY="167.0" size="7em" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="357.0" AnchorPane.topAnchor="77.0" />
+                                    <Label alignment="CENTER" layoutX="149.0" layoutY="205.0" prefHeight="20.0" prefWidth="164.0" text="Liczba mężczyzn" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="148.0" AnchorPane.topAnchor="205.0">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="liczba_mezcyzn" alignment="CENTER" layoutX="202.0" layoutY="77.0" prefHeight="20.0" prefWidth="58.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="146.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="201.0" AnchorPane.topAnchor="77.0">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="658.0" prefWidth="288.0" styleClass="panel" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="567.0" AnchorPane.topAnchor="40.0">
+                                 <children>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="82.0" layoutY="180.0" size="7em" textAlignment="CENTER" wrappingWidth="107.79998016357422" AnchorPane.bottomAnchor="445.0" AnchorPane.leftAnchor="82.0" AnchorPane.rightAnchor="83.20001983642578" AnchorPane.topAnchor="90.0" />
+                                    <Label alignment="CENTER" layoutX="16.0" layoutY="538.0" prefHeight="64.0" prefWidth="237.0" text="Liczba wszystkich" textFill="WHITE">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="liczba_wszystkich" alignment="CENTER" layoutX="106.0" layoutY="338.0" prefHeight="20.0" prefWidth="58.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="17.0" layoutY="570.0" prefHeight="64.0" prefWidth="237.0" text="nauczycieli" textFill="WHITE">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

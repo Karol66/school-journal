@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="895.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.MenuUczenController">
+   <children>
+      <AnchorPane fx:id="menu_glowne" prefHeight="750.0" prefWidth="884.4">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="16.0" prefHeight="755.0" prefWidth="895.0" stylesheets="@../../../../css/szablon.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <styleClass>
+                  <String fx:value="tlo" />
+                  <String fx:value="cien" />
+               </styleClass>
+               <children>
+                  <AnchorPane layoutY="-1.0" prefHeight="720.0" prefWidth="875.0" stylesheets="@../../../../css/szablon.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <styleClass>
+                        <String fx:value="tlo" />
+                        <String fx:value="cien" />
+                     </styleClass>
+                     <children>
+                        <AnchorPane layoutX="31.0" layoutY="11.0" prefHeight="132.0" prefWidth="233.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="602.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="70.0" layoutY="151.0" size="7em" textAlignment="CENTER" wrappingWidth="98.79998016357422" AnchorPane.bottomAnchor="476.14286041259766" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="69.20001983642578" AnchorPane.topAnchor="73.85713958740234" />
+                              <Label alignment="CENTER" layoutX="17.0" layoutY="98.0" prefHeight="35.0" prefWidth="202.0" text="Liczba wszystkich" textFill="WHITE" AnchorPane.bottomAnchor="62.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="liczba_wszystkich" alignment="CENTER" layoutX="165.0" layoutY="14.0" prefHeight="20.0" prefWidth="58.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="267.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="87.0" AnchorPane.topAnchor="320.0">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="16.0" layoutY="578.0" prefHeight="35.0" prefWidth="202.0" text=" uczniów" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="panel" />
+                              <String fx:value="cien" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="307.0" layoutY="40.0" prefHeight="132.0" prefWidth="233.0" stylesheets="@../../../../css/szablon.css" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="307.0" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="MALE" layoutX="14.0" layoutY="65.0" size="7em" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="84.0" />
+                              <Label alignment="CENTER" layoutX="36.0" layoutY="99.0" prefHeight="20.0" prefWidth="164.0" text="Liczba mężczyzn" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="240.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="liczba_mezcyzn" alignment="CENTER" layoutX="247.0" layoutY="118.0" prefHeight="20.0" prefWidth="58.0" stylesheets="@../../../../css/szablon.css" text="0" textFill="WHITE" AnchorPane.leftAnchor="247.0" AnchorPane.rightAnchor="217.0">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="panel" />
+                              <String fx:value="cien" />
+                           </styleClass>
+                        </AnchorPane>
+                        <AnchorPane layoutX="595.0" layoutY="11.0" prefHeight="132.0" prefWidth="233.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="313.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="380.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="FEMALE" layoutX="14.0" layoutY="65.0" size="7em" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="84.0" />
+                              <Label alignment="CENTER" layoutX="35.0" layoutY="97.0" prefHeight="20.0" prefWidth="164.0" text="Liczba kobiet" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="240.0">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="liczba_kobiet" alignment="CENTER" layoutX="179.0" layoutY="115.0" prefHeight="53.0" prefWidth="198.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="132.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="115.0">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <styleClass>
+                              <String fx:value="panel" />
+                              <String fx:value="cien" />
+                           </styleClass>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

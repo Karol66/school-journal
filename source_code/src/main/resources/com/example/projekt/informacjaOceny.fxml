@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="203.0" prefWidth="402.0" styleClass="lewyPasek" stylesheets="@../../../css/szablon.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.InforacjaController">
+   <children>
+      <Label fx:id="label" layoutX="30.0" layoutY="102.0" text="Ocena źle wprowadzona !" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="59.0" prefWidth="402.0" styleClass="goryPasekPodklad" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="144.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="51.0" prefWidth="402.0" stylesheets="@../../../css/szablon.css">
+               <styleClass>
+                  <String fx:value="cien" />
+                  <String fx:value="goryPasek" />
+               </styleClass>
+               <children>
+                  <Button fx:id="zamknij" layoutX="347.0" layoutY="1.0" mnemonicParsing="false" onAction="#zamknij" prefHeight="24.0" prefWidth="54.0" styleClass="zamknij" stylesheets="@../../../css/szablon.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="CLOSE" />
+                     </graphic>
+                  </Button>
+                  <Button fx:id="zminimalizuj" layoutX="292.0" layoutY="2.0" mnemonicParsing="false" onAction="#zminimalizuj" prefHeight="24.0" prefWidth="54.0" styleClass="zminimalizuj" stylesheets="@../../../css/szablon.css" AnchorPane.topAnchor="2.0">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="MINUS" />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

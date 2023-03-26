@@ -1,0 +1,60 @@
+
+.tloLewe{
+   -fx-background-color:linear-gradient(to bottom right, #bf2d2d, #5a1b1b);
+   -fx-border-color:#000;
+   -fx-border-width:.4px 0px .4px .4px;
+}
+
+.tloPrawe{
+   -fx-background-color:#fff;
+   -fx-border-color:#000;
+   -fx-border-width:.4px .4px .4px 0px;
+}
+
+.zamknij{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+
+.zamknij:hover{
+    -fx-background-color:#e00c0c;
+}
+
+.zminimalizuj{
+     -fx-background-color:transparent;
+     -fx-cursor:hand;
+}
+
+.zminimalizuj:hover{
+     -fx-background-color:#efefef;
+}
+
+.poleTekstowe{
+    -fx-background-color:linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius:5px;
+    -fx-border-color:#000;
+    -fx-border-width:.2px;
+    -fx-border-radius:5px;
+    -fx-font-size:13px;
+    -fx-font-family:"System";
+}
+
+.poleTekstowe:focused{
+     -fx-background-color:#fff;
+     -fx-border-color:#000;
+     -fx-border-width:.4px;
+}
+
+.zaloguj{
+    -fx-background-color:linear-gradient(to bottom, #bf2d2d, #5a1b1b);
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+
+.zaloguj:hover{
+    -fx-background-color:linear-gradient(to bottom, #e73c3c, #9a2d2d);
+}
+

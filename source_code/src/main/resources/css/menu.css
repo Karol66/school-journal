@@ -1,0 +1,44 @@
+
+.gornyPasek{
+   -fx-background-color:linear-gradient(to bottom right, #bf2d2d, #5a1b1b);
+   -fx-border-color:#000;
+   -fx-border-width:.4px 0px .4px .4px;
+}
+
+.dolnyPasek{
+   -fx-background-color:#fff;
+   -fx-border-color:#000;
+   -fx-border-width:.4px .4px .4px 0px;
+}
+
+.opcje{
+     -fx-background-color:#f3f3f3;
+     -fx-background-radius:20px;
+     -fx-cursor:hand;
+}
+
+.opcje:hover{
+     -fx-background-color:#bf2d2d;
+}
+
+.opcje:pressed{
+     -fx-background-color:#9a2d2d;
+}
+
+.zamknij{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+
+.zamknij:hover{
+    -fx-background-color:#e00c0c;
+}
+
+.zminimalizuj{
+     -fx-background-color:transparent;
+     -fx-cursor:hand;
+}
+
+.zminimalizuj:hover{
+     -fx-background-color:#efefef;
+}

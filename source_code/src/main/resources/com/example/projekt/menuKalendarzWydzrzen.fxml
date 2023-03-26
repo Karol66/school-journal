@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projekt.MenuKalendarzWydzrzenController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="237.0" layoutY="137.0" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="60.0" prefWidth="1100.0" styleClass="goryPasekPodklad" stylesheets="@../../../css/szablon.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="260.0" layoutY="-75.0" prefHeight="40.0" prefWidth="874.0" styleClass="goryPasek" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="14.0" layoutY="40.0" size="2.5em" wrappingWidth="44.928571701049805" />
+                              <Label layoutX="86.0" layoutY="13.0" text="Dziennik Szkolny">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="zamknij" layoutX="1028.0" layoutY="7.0" mnemonicParsing="false" onAction="#zamknij" styleClass="zamknij" stylesheets="@../../../css/szablon.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="CLOSE" text="" textAlignment="CENTER" wrappingWidth="50.678571701049805" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="zminimalizuj" layoutX="956.0" layoutY="2.0" mnemonicParsing="false" onAction="#zminimalizuj" styleClass="zminimalizuj" stylesheets="@../../../css/szablon.css" AnchorPane.rightAnchor="73.0" AnchorPane.topAnchor="2.0">
+                                 <graphic>
+                                    <FontAwesomeIcon glyphName="MINUS" textAlignment="CENTER" wrappingWidth="50.678571701049805" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="740.0" prefWidth="224.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="170.0" prefHeight="740.0" prefWidth="224.0" styleClass="lewyPasek" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="65.0" layoutY="138.0" size="8em" textAlignment="CENTER" />
+                              <Label alignment="CENTER" layoutX="81.0" layoutY="157.0" text="Witaj!" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="100.5" layoutX="113.0" layoutY="208.0" startX="-101.5" stroke="WHITE" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" />
+                              <Button fx:id="wyloguj" layoutX="31.0" layoutY="680.0" mnemonicParsing="false" onAction="#handleBottomClick" prefHeight="46.0" prefWidth="159.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Wyloguj się">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cofnij" layoutX="31.0" layoutY="634.0" mnemonicParsing="false" onAction="#handleBottomClick" prefHeight="46.0" prefWidth="159.0" styleClass="przeyciskiLewyPasek" stylesheets="@../../../css/szablon.css" text="Cofnij">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" size="1.5em" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="414.0" prefWidth="874.0" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+                           <styleClass>
+                              <String fx:value="cien" />
+                              <String fx:value="tlo" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="tabela" layoutX="47.0" layoutY="39.0" onMouseClicked="#wybrane" prefHeight="374.0" prefWidth="814.0" stylesheets="@../../../css/szablon.css" AnchorPane.bottomAnchor="270.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="52.0">
+                                <columns>
+                                  <TableColumn fx:id="wydzarzenie_tabela" prefWidth="591.7333008050919" text="Wydarzenie" />
+                                  <TableColumn fx:id="data_tabela" prefWidth="282.66680908203125" text="Data" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="wydarzenie_text_field" layoutX="158.0" layoutY="549.0" prefHeight="31.0" prefWidth="216.0" styleClass="poleTekstowe" stylesheets="@../../../css/szablon.css" AnchorPane.leftAnchor="158.0" />
+                              <DatePicker fx:id="data_date_picker" layoutX="159.0" layoutY="601.0" prefHeight="31.0" prefWidth="216.0" styleClass="poleTekstowe" stylesheets="@../../../css/szablon.css" />
+                              <Label layoutX="55.0" layoutY="551.0" text="Wydarzenie:" AnchorPane.leftAnchor="55.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="111.0" layoutY="602.0" text="Data:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="dodaj" layoutX="408.0" layoutY="508.0" mnemonicParsing="false" onAction="#setData" onMouseClicked="#walidacja" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Dodaj">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="usun" layoutX="544.0" layoutY="508.0" mnemonicParsing="false" onAction="#deleteData" onMouseClicked="#walidacja" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Usuń">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="edytuj" layoutX="679.0" layoutY="508.0" mnemonicParsing="false" onAction="#editData" onMouseClicked="#walidacja" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Edytuj">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="zaktualizuj" layoutX="544.0" layoutY="576.0" mnemonicParsing="false" onAction="#zaktualizuj" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Zaktualizuj">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="zapisz_do_pdf" layoutX="679.0" layoutY="575.0" mnemonicParsing="false" onAction="#pdfs" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Zapisz do pdf">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="wyczysc" layoutX="408.0" layoutY="576.0" mnemonicParsing="false" onAction="#wyczysc" prefHeight="49.0" prefWidth="122.0" stylesheets="@../../../css/szablon.css" text="Wyczyść">
+                                 <styleClass>
+                                    <String fx:value="cien" />
+                                    <String fx:value="przyciski" />
+                                 </styleClass>
+                              </Button>
+                              <TextField fx:id="wyszukaj" layoutX="63.0" layoutY="14.0" prefHeight="26.0" prefWidth="226.0" promptText="Wyszukaj" styleClass="poleTekstowe" stylesheets="@../../../css/szablon.css" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="12.0" />
+                              <FontAwesomeIcon fill="#c9c2c2" glyphName="SEARCH" layoutX="32.0" layoutY="31.0" size="1.5em" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.714284896850586" />
+                              <TextField fx:id="id_wydarzenie_text_field" disable="true" layoutX="159.0" layoutY="498.0" prefHeight="31.0" prefWidth="216.0" styleClass="poleTekstowe" stylesheets="@../../../css/szablon.css" />
+                              <Label layoutX="39.0" layoutY="500.0" text="Id wydarzenia:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="alert1" layoutX="159.0" layoutY="533.0" text="Źle wproawdzone wydarzenie!" textFill="RED" visible="false" />
+                              <Label fx:id="alert2" layoutX="159.0" layoutY="583.0" text="Źle wprowadzona data !" textFill="RED" visible="false" />
+                              <Pagination fx:id="paginacja" layoutX="15.0" layoutY="50.0" prefHeight="441.0" prefWidth="815.0" AnchorPane.bottomAnchor="219.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0" />
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
