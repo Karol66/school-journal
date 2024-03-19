@@ -1,1 +1,1 @@
-# School_Dictionary
+# school-journal
